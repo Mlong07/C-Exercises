@@ -1,0 +1,16 @@
+//Write a program that takes as input given lengths expressed in feet and inches. The
+program should then convert and output the lengths in centimeters. Assume that
+the given lengths in feet and inches are integers.//
+
+#include <iostream>
+int main()
+{
+float in, cm, ft, totinches =0;
+  
+  std::cout << "Enter total feet and inches to convert:/n";
+  std::cin >> ft >> in;
+
+  totinches = (12*ft) + in;
+  cm = totinches * 2.54;
+  std:: cout << "The length in cenimeters is : " << cm << "cm";
+}
