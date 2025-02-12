@@ -1,0 +1,41 @@
+//Write a program that takes as input any change expressed in cents. It should then
+compute the number of half-dollars, quarters, dimes, nickels, and pennies to be
+returned, returning as many half-dollars as possible, then quarters, dimes, nickels,
+and pennies, in that order. For example, 483 cents should be returned as 9 halfdollars, 1 quarter, 1 nickel, and 3 pennies//
+
+
+#include<iostream>
+using namespace std;
+
+const int HDOL = 50;
+const int QUAR = 25;
+const int DIME = 10;
+const int NICK = 5;
+const int PENN = 1;
+
+int main()
+{
+  int change;
+
+  cout << "Enter Amount of Change: ";
+  cin >> change;
+  cout << endl;
+
+  cout << "The change you entered is: " << change << endl;
+
+  cout << "The number of half dollars to be returned is " << change/HDOL << endl;
+  change = change % HDOL;
+
+  cout << "The number of quarters to be returned is " << change/QUAR << endl;
+  change = change % QUAR;
+
+  cout << "The number of dimes to be returned is " << change/DIME << endl;
+  change = change % DIME;
+
+  cout << "The number of nickles to be returned is " << change/NICK << endl;
+  change = change % NICK;
+
+  cout << "The number of pennies to be returned is " << change/PENN << endl;
+  change = change % PENN;
+  return 0;
+}
